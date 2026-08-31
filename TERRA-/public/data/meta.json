@@ -1,0 +1,17 @@
+{
+  "region": "Po Valley, Northern Italy",
+  "cellCount": 8769,
+  "latRange": [
+    44.5045,
+    45.4945
+  ],
+  "lonRange": [
+    10.5063,
+    11.4875
+  ],
+  "center": [
+    10.997,
+    45
+  ],
+  "generatedAt": "2026-07-24T10:20:58.084Z"
+}

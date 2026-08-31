@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  /* Color Palette Tokens */
+  --terra-forest: #0B3D2E;        /* primary — sidebar, headers, primary buttons */
+  --terra-forest-light: #14532D;  /* hover/active states on primary */
+  --terra-paper: #F7F4EC;         /* app background — warm off-white, "report paper" not white */
+  --terra-surface: #FFFFFF;       /* card surfaces */
+  --terra-soil: #C17A3D;          /* secondary accent — soil/earth tones, used for warnings & soil data chips */
+  --terra-ai-accent: #2D5DE0;     /* AI/Gemini features only — diagnostic widget, enzyme designer */
+  --terra-ink: #14181A;           /* primary text */
+  --terra-ink-muted: #5B6560;     /* secondary text */
+  --terra-line: #E4DFD3;          /* hairline borders — use 1px borders, not shadows, for structure */
+
+  /* Risk semantic scale */
+  --terra-risk-critical: #B3261E;
+  --terra-risk-moderate: #E3A008;
+  --terra-risk-healthy: #2E7D32;
+
+  /* SOC heatmap gradient (low → high carbon) */
+  --terra-soc-1: #F4E8C1;  /* depleted */
+  --terra-soc-2: #C8D5A9;
+  --terra-soc-3: #8FB596;
+  --terra-soc-4: #4F8F6E;
+  --terra-soc-5: #1B4332;  /* thriving */
+
+  --background: var(--terra-paper);
+  --foreground: var(--terra-ink);
+}
+
+@theme inline {
+  --color-terra-forest: var(--terra-forest);
+  --color-terra-forest-light: var(--terra-forest-light);
+  --color-terra-paper: var(--terra-paper);
+  --color-terra-surface: var(--terra-surface);
+  --color-terra-soil: var(--terra-soil);
+  --color-terra-ai: var(--terra-ai-accent);
+  --color-terra-ink: var(--terra-ink);
+  --color-terra-ink-muted: var(--terra-ink-muted);
+  --color-terra-line: var(--terra-line);
+
+  --color-risk-critical: var(--terra-risk-critical);
+  --color-risk-moderate: var(--terra-risk-moderate);
+  --color-risk-healthy: var(--terra-risk-healthy);
+
+  --color-soc-1: var(--terra-soc-1);
+  --color-soc-2: var(--terra-soc-2);
+  --color-soc-3: var(--terra-soc-3);
+  --color-soc-4: var(--terra-soc-4);
+  --color-soc-5: var(--terra-soc-5);
+
+  --font-serif: var(--font-serif), "Source Serif 4", Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-mono), "IBM Plex Mono", monospace;
+}
+
+body {
+  background-color: var(--terra-paper);
+  color: var(--terra-ink);
+  font-family: var(--font-sans);
+}
+
+.mapboxgl-popup-content {
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 12px;
+  background-color: var(--terra-surface);
+  color: var(--terra-ink);
+  border: 1px solid var(--terra-line);
+  box-shadow: none !important;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}

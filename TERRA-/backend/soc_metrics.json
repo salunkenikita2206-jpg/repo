@@ -1,0 +1,8 @@
+{
+  "r2": 0.5139,
+  "mae": 0.0932,
+  "rmse": 0.1487,
+  "data_source": "Local CSV Fallback",
+  "trained_rows": 8348,
+  "features_used": 64
+}
