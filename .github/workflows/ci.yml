@@ -2,7 +2,6 @@ name: CI
 on: push
 jobs:
   deploy:
-    needs: remove
     runs-on: ubuntu-latest
     environment: production
     steps:
