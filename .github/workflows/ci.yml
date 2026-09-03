@@ -1,17 +1,18 @@
-name: Deploy
+name: Deploy Pages
 on: 
-  workflow_dispatch:
-    inputs:
-      target:
-        description: "where to deploy"
-        type: choice
-        options: [staging, production]
+  push:
+    branches: [ main ]
+permissions:
+  pages: write
+  id-token: write
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Deploying to ${{ inputs.target }}"
-      
-     
- 
-    
+      runs-on: ubuntu-latest
+      environment: github-pages
+      steps:
+        - uses: actions/checkout@v4
+        - uses: actions/upload-pages-artifact@v3
+         with:
+           path: .
+        - uses: actions/deploy-page@v4
+  
