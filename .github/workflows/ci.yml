@@ -8,8 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Deploy
-      env:
-        TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-      run: echo "Deploying to production"
+        env:
+          TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        run: echo "Deploying to production"
  
     
