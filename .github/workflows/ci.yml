@@ -1,16 +1,15 @@
 name: CI
 on: push
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: echo "Running tests"
   deploy:
-    needs: test
+    needs: remove
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    environment: production
     steps:
       - uses: actions/checkout@v4
-      - run: echo "Deploying, because this is main"
+      - name: Deploy
+      env:
+        TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+      run: echo "Deploying to production"
+ 
     
